@@ -19,7 +19,7 @@ router.post("/burgers", function(req, res){
     });
 });
 
-router.update("/burgers", function(req, res){
+router.put("/burgers", function(req, res){
     var burg = req.body
     burger.updateOne(burg, function(data){
         res.json(data)
