@@ -20,10 +20,24 @@ router.post("/burgers", function(req, res){
 });
 
 router.put("/burgers", function(req, res){
-    var burg = req.body
+    var burg = req.body.id
+    var burgerName = req.body.name
+    console.log("id", burg)
     burger.updateOne(burg, function(data){
         res.json(data)
+        console.log("successfully updated")
     })
 })
 
 module.exports = router;
+
+// Font end start
+// $("#anyId").onClick(function(
+//     $.ajax {
+//         url: "/burgers",
+//         type: "PUT",
+//         data: "cheeseburger"
+//     }
+// )).then(
+//     reload()
+// )

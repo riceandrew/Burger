@@ -10,6 +10,12 @@ var burger = {
     orm.insertOne("burgers", ["name", "devoured"], [burger.name, false], function(data){
         cb(data)
     })
+  },
+  updateOne: function(burger, cb){
+      console.log(burger)
+      orm.updateOne("burgers", ["name", "devoured"], [burger.name, false], function(data){
+          cb(data)
+      })
   }
 }
 
